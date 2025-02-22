@@ -1,0 +1,50 @@
+/* Современный адаптивный дизайн */
+/* Анимации и переходы */
+/* Тёмная тема */
+
+/* Основные стили */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #2196F3;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Стили компонентов */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+} 

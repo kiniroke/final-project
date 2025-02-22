@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGame | Console Rental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Overlays -->
+<div class="overlay hidden" id="overlay"></div>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="navbar container">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="NextGame" class="logo-img">
+            <span class="logo-text">NextGame</span>
+        </a>
+
+        <div class="nav-controls">
+            <button class="btn btn-icon" id="search-toggle">
+                <i class="fas fa-search"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="show-login">Sign In</button>
+                <button class="btn btn-primary" id="show-register">Join Free</button>
+                <button class="btn btn-danger hidden" id="logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar container hidden" id="search-bar">
+        <input type="text" placeholder="Search consoles..." id="search-input">
+        <div class="search-results" id="search-results"></div>
+    </div>
+</header>
+
+<!-- Auth Modals -->
+<div class="modal hidden" id="login-modal">
+    <form id="login-form" class="auth-form">
+        <h2>Sign In</h2>
+        <div class="form-group">
+            <input type="email" id="login-email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input type="password" id="login-password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+</div>
+
+<div class="modal hidden" id="register-modal">
+    <form id="register-form" class="auth-form">
+        <h2>Create Account</h2>
+        <div class="form-group">
+            <input type="text" id="register-name" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="register-email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input type="password" id="register-password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+    </form>
+</div>
+
+<!-- Main Content -->
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Play Tomorrow's Games Today</h1>
+            <p class="hero-subtitle">Rent premium consoles with 24h delivery</p>
+        </div>
+    </section>
+
+    <!-- Consoles Grid -->
+    <section class="consoles-section">
+        <div class="section-header">
+            <h2>Latest Consoles</h2>
+            <div class="filters">
+                <button class="btn btn-filter active">All</button>
+                <button class="btn btn-filter">PlayStation</button>
+                <button class="btn btn-filter">Xbox</button>
+                <button class="btn btn-filter">Nintendo</button>
+            </div>
+        </div>
+
+        <div class="consoles-grid" id="consoles-list">
+            <!-- Dynamic Content -->
+        </div>
+    </section>
+
+    <!-- Rentals Section -->
+    <section class="rentals-section hidden">
+        <div class="section-header">
+            <h2>My Active Rentals</h2>
+            <div class="rental-stats">
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <span id="active-rentals">0</span> Active
+                </div>
+            </div>
+        </div>
+        <div class="rentals-grid" id="rentals-list"></div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
